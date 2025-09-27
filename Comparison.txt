@@ -1,0 +1,29 @@
+# ---------> Comparison between models regression
+
+# models = {
+#     'lin_reg':LinearRegression(),
+#     'random_F_reg':RandomForestRegressor(n_estimators=500, max_depth=15, random_state=42),
+#     'XGBRF_reg':XGBRFRegressor(n_estimators=500, random_state=42),
+#     'XGB_Reg':XGBRegressor(n_estimators=500, random_state=42),
+#     'Ridge':Ridge(alpha=1),
+#     'SGD':SGDRegressor(max_iter=1000, tol=1e-3, penalty='elasticnet',\
+#                                alpha=.0001, eta0=.01, learning_rate='invscaling', random_state=42),
+#     'ElasticNet': ElasticNet(alpha=0.001, l1_ratio=0.5, random_state=42)
+#     }
+
+# results = []
+# for name, model in models.items():
+#     print(f"\n--------->{name}<---------\n")
+#     pipe = make_pipe(model)
+#     pipe.fit(X_train, y_train)
+#     y_pred = pipe.predict(X_test)
+
+#     r2_sc = r2_score(y_test, y_pred)    
+    
+#     y_test__exp = np.expm1(y_test)
+#     y_pred__exp = np.expm1(y_pred)
+    
+#     RMSE = root_mean_squared_error(y_test__exp, y_pred__exp)
+    
+#     print(f"r2_score {name}: {r2_sc}")
+#     print(f"RMSE {name}: {RMSE}")
