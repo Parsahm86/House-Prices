@@ -107,13 +107,12 @@ preprocessor = ColumnTransformer(
     ]
 )
 
-XGB_reg = XGBRegressor()
+XGB_reg = XGBRegressor(n_estimators=100, random_state=42)
 
 def make_pipe(model):
     return Pipeline(steps=[
         ('preprocessor', preprocessor ),
         ('scaler', StandardScaler(with_mean=False)),
-        ('featur_select', SelectFromModel(XGB_reg, threshold=.01)),
         ('regressor', model)
         ])
     
