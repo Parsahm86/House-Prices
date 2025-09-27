@@ -11,14 +11,11 @@ from matplotlib import rcParams
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder, StandardScaler
 from sklearn.model_selection import train_test_split, RandomizedSearchCV
-from sklearn.linear_model import LinearRegression, SGDRegressor,Ridge, ElasticNet
 from sklearn.metrics import r2_score, root_mean_squared_error, make_scorer
-from sklearn.ensemble import RandomForestRegressor
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
-from sklearn.feature_selection import SelectFromModel
 
-from xgboost import XGBRFRegressor, XGBRegressor
+from xgboost import XGBRegressor
 # ---------------------
 
 # normal font for matplotlib
